@@ -30,7 +30,7 @@ function App() {
     <h1>Registration Form</h1>
     <FormInput name="firstname" type="text" placeholder="First Name" errorMessage="First Name should contains only Characters" label="First Name" pattern="^[A-Za-z ]{1,25}$" required onChange={onChange}/>
     <FormInput name="lastname" type="text" placeholder="Last Name" errorMessage="Last Name should contains only Characters" label="Last Name" pattern="^[A-Za-z ]{1,25}$" required onChange={onChange}/>
-    <FormInput name="email" type="email" placeholder="Email" errorMessage="Enter valid email only i.e. abc@gmail.com" label="Email" required onChange={onChange}/>
+    <FormInput name="email" type="email" placeholder="Email" errorMessage="Enter valid email only i.e. abc@gmail.com" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,63})$" label="Email" required onChange={onChange}/>
     <FormInput name="password" type="password" placeholder="Password" errorMessage="Password should contains alpha-numeric values,special characters and minimum 8 characters." label="Password" pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$" required  onChange={onChange}/>
     <FormInput name="confrimpassword" type="password" placeholder="Confrim Password" errorMessage="Password don't match" label="Confrim Password" pattern={values.password} required onChange={onChange}/>
     <div className="submit">
@@ -39,7 +39,7 @@ function App() {
       </form>
       <div className="img">
         <h2 className="img_heading" data-heading="WELCOME TO DALHOUSIE">Welcome To Dalhousie</h2>
-        <img src="/img.jpg" alt="Gradient Image" height="100%" width="100%" className="img_img"/>
+        <img src="/img.jpg" alt="" height="100%" width="100%" className="img_img"/>
       </div>
     </div>
   );
